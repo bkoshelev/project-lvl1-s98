@@ -8,7 +8,8 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build",
-    "babel-version": "babel --version"
+    "babel-version": "babel --version",
+    "eslint": "eslint src/"
   },
   "repository": {
     "type": "git",
@@ -27,10 +28,16 @@
     "babel-core",
     "babel-preset-env",
     "babel-preset-stage-0",
-    "readline-sync"
+    "eslint",
+    "eslint-config-airbnb-base",
+    "eslint-plugin-import",
+    "babel-eslint"
   ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
-  "homepage": "https://github.com/grom194/project-lvl1-s98#readme"
+  "homepage": "https://github.com/grom194/project-lvl1-s98#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.7"
+  }
 }
