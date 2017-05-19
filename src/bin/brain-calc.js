@@ -2,7 +2,7 @@
 import NewGame from '..';
 
 const game = {
-  name: 'even',
+  name: 'calc',
 };
 
 NewGame(game);
