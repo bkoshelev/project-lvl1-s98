@@ -45,6 +45,23 @@ const CreateQuestionCalcGame = () => {
   };
 };
 
+//           BRAIN-GCD GAME
+const CreateQuestionGcdGame = () => {
+  const num1 = GetRandomNum();
+  const num2 = GetRandomNum();
+
+  const gcd = (a, b) => {
+    if (b === 0) return a;
+    return gcd(b, a % b);
+  };
+
+
+  return {
+    text: `${num1} ${num2}`,
+    answer: gcd(num1, num2),
+  };
+};
+
 //           MAIN GAME
 const PrepareGame = () => {
   console.log('Welcome to the Brain Games!');
@@ -56,6 +73,8 @@ const GetGameRules = (game) => {
       return '\'Answer "yes" if number even otherwise answer "no"';
     case 'calc' :
       return 'What is the result of the expression?';
+    case 'gcd' :
+      return 'Find the greatest common divisor of given numbers.';
     default :
       return 'error';
   }
@@ -69,6 +88,8 @@ const CreateQuestion = (game) => {
       return CreateQuestionEvenGame();
     case 'calc' :
       return CreateQuestionCalcGame();
+    case 'gcd' :
+      return CreateQuestionGcdGame();
     default :
       return 'error';
   }
