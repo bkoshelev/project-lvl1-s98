@@ -25,6 +25,7 @@ export const createQuestion = () => {
   };
 
   const balanceResult = Balance(arrOfNums);
+  console.log(balanceResult);
   const ArrToStr = (element, acc) => element + acc;
   const rightAnswer = balanceResult.reduce(ArrToStr, '', balanceResult);
 
