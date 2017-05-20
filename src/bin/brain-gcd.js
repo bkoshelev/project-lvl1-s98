@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import startGame from '..';
-import * as GameObject from '../games/brain-gcd';
+import newGame from '../games/brain-gcd';
 
-startGame(GameObject);
+newGame();

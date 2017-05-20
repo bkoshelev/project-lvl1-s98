@@ -1,6 +1,6 @@
 {
   "name": "brain-games_hexlet_project_1",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "hexlet_project_1",
   "main": "src/bin/brain-games.js",
   "scripts": {

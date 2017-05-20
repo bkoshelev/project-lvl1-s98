@@ -1,9 +1,10 @@
 import getRandomNum from '../functions';
+import startGame from '..';
 
-export const createQuestion = () => {
-  const num1 = getRandomNum();
-  const num2 = getRandomNum();
-  const randomN = Math.floor((Math.random() * 3) + 1);
+const createQuestion = () => {
+  const num1 = getRandomNum(1, 20);
+  const num2 = getRandomNum(1, 20);
+  const randomN = getRandomNum(1, 3);
   let rightAnswer = 0;
   let symbol = false;
   switch (randomN) {
@@ -25,8 +26,17 @@ export const createQuestion = () => {
 
   return {
     text: `${num1} ${symbol} ${num2}`,
-    answer: rightAnswer,
+    answer: String(rightAnswer),
   };
 };
 
-export const getGameRules = () => 'What is the result of the expression?';
+const getGameRules = () => 'What is the result of the expression?';
+
+export default () => {
+  const functions = {
+    GameRules: getGameRules(),
+    createQuestion,
+  };
+  startGame(functions);
+  return true;
+};

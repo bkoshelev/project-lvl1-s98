@@ -1,7 +1,8 @@
 import getRandomNum from '../functions';
+import startGame from '..';
 
-export const createQuestion = () => {
-  const number = getRandomNum();
+const createQuestion = () => {
+  const number = getRandomNum(1, 20);
 
   return {
     text: number,
@@ -9,4 +10,13 @@ export const createQuestion = () => {
   };
 };
 
-export const getGameRules = () => 'Answer "yes" if number even otherwise answer "no"';
+const getGameRules = () => 'Answer "yes" if number even otherwise answer "no"';
+
+export default () => {
+  const functions = {
+    GameRules: getGameRules(),
+    createQuestion,
+  };
+  startGame(functions);
+  return true;
+};

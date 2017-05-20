@@ -4,7 +4,7 @@ const askPLayerName = () => readlineSync.question('May I have your name? ');
 
 export default (GameObject) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${GameObject.getGameRules()}\n`);
+  console.log(`${GameObject.GameRules}\n`);
 
   const player = {
     name: askPLayerName(),
@@ -21,12 +21,7 @@ export default (GameObject) => {
     const question = GameObject.createQuestion();
     console.log(`Question: ${question.text}`);
 
-    const getPlayerAnswer = () => {
-      const answer = readlineSync.question('Your Answer: ');
-      return isNaN(answer) ? answer : Number(answer);
-    };
-
-    const playerAnswer = getPlayerAnswer();
+    const playerAnswer = readlineSync.question('Your Answer: ');
 
     if (playerAnswer === question.answer) {
       console.log('Correct!');
