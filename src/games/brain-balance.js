@@ -7,7 +7,7 @@ export const createQuestion = () => {
   const arrOfNums = stringRandomNum.map(x => Number(x));
 
   const Balance = (arr) => {
-    console.log(arr);
+    // console.log(arr);
 
     const sIncrease = (i, ii) => { // По возрастанию
       if (i > ii) { return 1; } else if (i < ii) { return -1; }
@@ -25,7 +25,7 @@ export const createQuestion = () => {
   };
 
   const balanceResult = Balance(arrOfNums);
-  console.log(balanceResult);
+  // console.log(balanceResult);
   const ArrToStr = (element, acc) => element + acc;
   const rightAnswer = balanceResult.reduce(ArrToStr, '', balanceResult);
 
