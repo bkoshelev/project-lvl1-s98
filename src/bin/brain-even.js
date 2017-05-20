@@ -1,8 +1,5 @@
 #!/usr/bin/env node
-import NewGame from '..';
+import startGame from '..';
+import * as GameObject from '../games/brain-even';
 
-const game = {
-  name: 'even',
-};
-
-NewGame(game);
+startGame(GameObject);
