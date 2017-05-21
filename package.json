@@ -1,6 +1,6 @@
 {
   "name": "brain-games_hexlet_project_1",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "hexlet_project_1",
   "main": "src/bin/brain-games.js",
   "scripts": {
@@ -39,7 +39,8 @@
     "brain-calc" : "dist/bin/brain-calc.js",
     "brain-gcd"  : "dist/bin/brain-gcd.js",
     "brain-balance" : "dist/bin/brain-balance.js",
-    "brain-progression" : "dist/bin/brain-progression.js"
+    "brain-progression" : "dist/bin/brain-progression.js",
+    "brain-prime" : "dist/bin/brain-prime.js"
   },
   "homepage": "https://github.com/grom194/project-lvl1-s98#readme",
   "dependencies": {
