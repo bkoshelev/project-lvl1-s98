@@ -2,9 +2,9 @@ import readlineSync from 'readline-sync';
 
 const askPLayerName = () => readlineSync.question('May I have your name? ');
 
-export default (GameObject) => {
+export default (GameRules, createQuestion) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${GameObject.GameRules}\n`);
+  console.log(`${GameRules}\n`);
 
   const player = {
     name: askPLayerName(),
@@ -18,7 +18,7 @@ export default (GameObject) => {
       return console.log(`Congratulations, ${player.name}!`);
     }
 
-    const question = GameObject.createQuestion();
+    const question = createQuestion();
     console.log(`Question: ${question.text}`);
 
     const playerAnswer = readlineSync.question('Your Answer: ');

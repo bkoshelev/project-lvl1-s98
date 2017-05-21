@@ -17,13 +17,5 @@ const createQuestion = () => {
   };
 };
 
-const getGameRules = () => 'Is it a prime number?';
-
-export default () => {
-  const functions = {
-    GameRules: getGameRules(),
-    createQuestion,
-  };
-  startGame(functions);
-  return true;
-};
+const gameRules = 'Is it a prime number?';
+export default () => startGame(gameRules, createQuestion);

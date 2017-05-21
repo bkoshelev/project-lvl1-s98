@@ -16,13 +16,5 @@ export const createQuestion = () => {
   };
 };
 
-export const getGameRules = () => 'Find the greatest common divisor of given numbers.';
-
-export default () => {
-  const functions = {
-    GameRules: getGameRules(),
-    createQuestion,
-  };
-  startGame(functions);
-  return true;
-};
+const gameRules = 'Find the greatest common divisor of given numbers.';
+export default () => startGame(gameRules, createQuestion);

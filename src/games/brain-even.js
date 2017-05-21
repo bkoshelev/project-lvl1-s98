@@ -10,13 +10,5 @@ const createQuestion = () => {
   };
 };
 
-const getGameRules = () => 'Answer "yes" if number even otherwise answer "no"';
-
-export default () => {
-  const functions = {
-    GameRules: getGameRules(),
-    createQuestion,
-  };
-  startGame(functions);
-  return true;
-};
+const gameRules = 'Answer "yes" if number even otherwise answer "no"';
+export default () => startGame(gameRules, createQuestion);

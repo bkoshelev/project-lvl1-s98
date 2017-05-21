@@ -21,7 +21,7 @@ const createQuestion = () => {
       rightAnswer = num1 * num2;
       break;
     default:
-      rightAnswer = 'error';
+      return false;
   }
 
   return {
@@ -30,13 +30,5 @@ const createQuestion = () => {
   };
 };
 
-const getGameRules = () => 'What is the result of the expression?';
-
-export default () => {
-  const functions = {
-    GameRules: getGameRules(),
-    createQuestion,
-  };
-  startGame(functions);
-  return true;
-};
+const gameRules = 'Find the greatest common divisor of given numbers.';
+export default () => startGame(gameRules, createQuestion);

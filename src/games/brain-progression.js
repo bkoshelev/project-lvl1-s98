@@ -22,13 +22,5 @@ const createQuestion = () => {
   };
 };
 
-const getGameRules = () => 'What number is missing in this progression?';
-
-export default () => {
-  const functions = {
-    GameRules: getGameRules(),
-    createQuestion,
-  };
-  startGame(functions);
-  return true;
-};
+const gameRules = 'What number is missing in this progression?';
+export default () => startGame(gameRules, createQuestion);
