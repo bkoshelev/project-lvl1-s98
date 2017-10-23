@@ -34,3 +34,6 @@ Congratulations, John!
 ```
 npm install brain-games_hexlet_project_1
 ```
+
+## Отзыв
+Впечатления по результатам выполнения проекта https://docs.google.com/document/d/12QCBs664acpZ_bvBp-0XS43HtTFBi1KWsZk_uWfE8VQ/edit?usp=sharing
